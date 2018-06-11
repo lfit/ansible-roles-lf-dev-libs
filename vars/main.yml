@@ -1,2 +1,2 @@
 ---
-# vars file for lf-dev-libs
+lf_dev_libs_packages: "{{ lf_dev_libs_packages_distro }}"
