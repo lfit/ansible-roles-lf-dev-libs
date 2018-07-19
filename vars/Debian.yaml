@@ -5,6 +5,7 @@ lf_dev_libs_packages_distro:
   - libfreetype6-dev
   - libgtest-dev
   - libjson-c-dev
+  - libldap2-dev
   - libcurl4-openssl-dev
   - libffi-dev
   - libpcap-dev

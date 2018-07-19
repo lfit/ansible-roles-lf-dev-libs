@@ -12,6 +12,7 @@ lf_dev_libs_packages_distro:
   - libvirt-devel
   - libxml2-devel
   - libxslt-devel
+  - openldap-devel
   - openssl-devel
   - readline-devel
   - unixODBC-devel
