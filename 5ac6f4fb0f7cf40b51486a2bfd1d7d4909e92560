@@ -22,6 +22,30 @@
       "revId": "5ac6f4fb0f7cf40b51486a2bfd1d7d4909e92560",
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3571f147_5aa7c3bc",
+        "filename": "vars/Debian.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 12
+      },
+      "writtenOn": "2018-07-20T15:50:38Z",
+      "side": 1,
+      "message": "Sure, I\u0027ll pipe this list through sort.. it will be harder to see my insertion...",
+      "parentUuid": "639231d1_9385cea5",
+      "range": {
+        "startLine": 8,
+        "startChar": 4,
+        "endLine": 8,
+        "endChar": 16
+      },
+      "revId": "5ac6f4fb0f7cf40b51486a2bfd1d7d4909e92560",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": false
     }
   ]
 }
