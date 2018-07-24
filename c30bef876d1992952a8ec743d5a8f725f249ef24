@@ -1,0 +1,7 @@
+Verified+1: Jenkins CI <releng+lf-jenkins@linuxfoundation.org>
+Code-Review+2: Thanh Ha <thanh.ha@linuxfoundation.org>
+Submitted-by: Anil Belur <abelur@linuxfoundation.org>
+Submitted-at: Tue, 24 Jul 2018 02:14:23 +0000
+Reviewed-on: https://gerrit.linuxfoundation.org/infra/11939
+Project: ansible/roles/lf-dev-libs
+Branch: refs/heads/master
