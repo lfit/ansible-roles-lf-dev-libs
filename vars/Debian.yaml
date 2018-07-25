@@ -2,6 +2,7 @@
 lf_dev_libs_packages_distro:
   - libboost-dev
   - libboost-python-dev
+  - libcppunit-dev
   - libcurl4-openssl-dev
   - libffi-dev
   - libfreetype6-dev

@@ -2,6 +2,7 @@
 lf_dev_libs_packages_distro:
   - boost-devel
   - boost-python-devel
+  - cppunit-devel
   - freetype-devel
   - gtest-devel
   - json-c-devel
