@@ -16,6 +16,24 @@
       "revId": "fc63a85725f5c995968a46cd602164454d7c4bdf",
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9286897c_bfd2a7bb",
+        "filename": "molecule/default/INSTALL.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2018-11-29T21:01:55Z",
+      "side": 1,
+      "message": "Right, as  the sphinx docs this is what we follow in ODL ... while some of the projects don\u0027t follow and instead use 2/4 spaces.\n\nhttp://www.sphinx-doc.org/es/stable/markup/code.html",
+      "parentUuid": "434ab5b3_6121d820",
+      "revId": "fc63a85725f5c995968a46cd602164454d7c4bdf",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": false
     }
   ]
 }
