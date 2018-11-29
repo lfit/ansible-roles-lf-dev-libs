@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "434ab5b3_6121d820",
+        "filename": "molecule/default/INSTALL.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2018-11-29T20:50:40Z",
+      "side": 1,
+      "message": "Does this need to be a 3 space indent? That seems a bit weird since nearly everything we do is 2 space indents.",
+      "revId": "fc63a85725f5c995968a46cd602164454d7c4bdf",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": false
+    }
+  ]
+}
