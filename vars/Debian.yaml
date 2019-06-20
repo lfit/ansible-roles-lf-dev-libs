@@ -16,4 +16,5 @@ lf_dev_libs_packages_distro:
   - libvirt-dev
   - libxml2-dev
   - libxslt-dev
+  - ruby-dev
   - unixodbc-dev

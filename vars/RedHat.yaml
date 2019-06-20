@@ -16,4 +16,5 @@ lf_dev_libs_packages_distro:
   - openldap-devel
   - openssl-devel
   - readline-devel
+  - ruby-devel
   - unixODBC-devel
