@@ -2,11 +2,15 @@
 lf_dev_libs_packages_distro:
   - boost-devel
   - boost-python-devel
+  - bzip2
+  - bzip2-devel
   - cppunit-devel
+  - findutils
   - freetype-devel
   - gtest-devel
   - json-c-devel
   - libcurl-devel
+  - libffi-devel
   - libffi-devel
   - libpcap-devel
   - libpng-devel
@@ -15,6 +19,13 @@ lf_dev_libs_packages_distro:
   - libxslt-devel
   - openldap-devel
   - openssl-devel
+  - openssl-devel
+  - readline-devel
   - readline-devel
   - ruby-devel
+  - sqlite
+  - sqlite-devel
   - unixODBC-devel
+  - xz
+  - xz-devel
+  - zlib-devel
