@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "90f8e43e_bc003e8d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2019-08-26T03:49:14Z",
+      "side": 1,
+      "message": "There is no hard-an-fast rule with the ansible roles, but from keeping things well organized I understand some of these packages (xz, xz-utils) etc are already present in lf-recommended-tools roles, therefore only `*-devel` that contains the apis, libs and headers, should go in here and the other utils/bins should be treated as tools.",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 46
+      },
+      "revId": "33cf1b82642079003d18ce2473d6b63922bb0c07",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b32741d2_cb580d82",
+        "filename": "vars/RedHat.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2019-08-26T03:49:14Z",
+      "side": 1,
+      "message": "this should be moved into lf recommended tools",
+      "range": {
+        "startLine": 5,
+        "startChar": 4,
+        "endLine": 5,
+        "endChar": 9
+      },
+      "revId": "33cf1b82642079003d18ce2473d6b63922bb0c07",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "78a19ca4_84f32d16",
+        "filename": "vars/RedHat.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2019-08-26T03:49:14Z",
+      "side": 1,
+      "message": "this should be moved into lf recommended tools",
+      "range": {
+        "startLine": 8,
+        "startChar": 4,
+        "endLine": 8,
+        "endChar": 13
+      },
+      "revId": "33cf1b82642079003d18ce2473d6b63922bb0c07",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8268af95_ee337bf6",
+        "filename": "vars/RedHat.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2019-08-26T03:49:14Z",
+      "side": 1,
+      "message": "this should be moved into lf recommended tools",
+      "range": {
+        "startLine": 26,
+        "startChar": 4,
+        "endLine": 26,
+        "endChar": 10
+      },
+      "revId": "33cf1b82642079003d18ce2473d6b63922bb0c07",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d4e09b28_2a157ce6",
+        "filename": "vars/RedHat.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2019-08-26T03:49:14Z",
+      "side": 1,
+      "message": "ditto",
+      "range": {
+        "startLine": 29,
+        "startChar": 4,
+        "endLine": 29,
+        "endChar": 6
+      },
+      "revId": "33cf1b82642079003d18ce2473d6b63922bb0c07",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": false
+    }
+  ]
+}
