@@ -2,6 +2,7 @@
 lf_dev_libs_packages_distro:
   - libboost-dev
   - libboost-python-dev
+  - libbz2-dev
   - libcppunit-dev
   - libcurl4-openssl-dev
   - libffi-dev
@@ -9,12 +10,17 @@ lf_dev_libs_packages_distro:
   - libgtest-dev
   - libjson-c-dev
   - libldap2-dev
+  - liblzma-dev
+  - libncurses5-dev
+  - libncursesw5-dev
   - libpcap-dev
   - libpng-dev
   - libreadline-dev
+  - libsqlite3-dev
   - libssl-dev
   - libvirt-dev
   - libxml2-dev
   - libxslt-dev
   - ruby-dev
+  - zlib1g-dev
   - unixodbc-dev
