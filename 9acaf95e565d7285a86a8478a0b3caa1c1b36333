@@ -1,0 +1,7 @@
+Code-Review+2: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Verified+1: Jenkins CI <releng+lf-jenkins@linuxfoundation.org>
+Submitted-by: Aric Gardner <agardner@linuxfoundation.org>
+Submitted-at: Fri, 20 Sep 2019 15:30:43 +0000
+Reviewed-on: https://gerrit.linuxfoundation.org/infra/c/ansible/roles/lf-dev-libs/+/61786
+Project: ansible/roles/lf-dev-libs
+Branch: refs/heads/master
