@@ -2,6 +2,8 @@
 - name: Pull in package names
   include_vars: "{{ item }}"
   with_first_found:
+    - '{{ ansible_distribution }}-{{ ansible_distribution_major_version }}.yaml'
+    - '{{ ansible_distribution }}.yaml'
     - '{{ ansible_os_family }}.yaml'
 
 - name: Install Dev libraries

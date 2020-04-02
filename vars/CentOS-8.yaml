@@ -1,7 +1,7 @@
 ---
 lf_dev_libs_packages_distro:
   - boost-devel
-  - boost-python-devel
+  - boost-python3-devel
   - bzip2-devel
   - cppunit-devel
   - freetype-devel
