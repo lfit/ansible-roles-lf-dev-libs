@@ -13,6 +13,7 @@
       yum:
         name: https://dl.fedoraproject.org/pub/epel/epel-release-latest-{{ ansible_distribution_major_version }}.noarch.rpm
         state: present
+        disable_gpg_check: True
       when: ansible_os_family == 'RedHat'
       become: true
 
@@ -24,7 +25,7 @@
             warn: no
         - name: Enable PowerTools
           command:
-            cmd: dnf config-manager --set-enabled PowerTools
+            cmd: dnf config-manager --set-enabled powertools
             warn: no
       become: true
       when: ansible_os_family == 'RedHat' and ansible_facts['distribution_major_version'] is version('8', '>=')
