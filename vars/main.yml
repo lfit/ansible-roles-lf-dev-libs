@@ -1,5 +1,7 @@
 ---
-lf_dev_libs_packages: "{{ lf_dev_libs_packages_common }} + {{ lf_dev_libs_packages_distro }}"
+lf_dev_libs_packages:
+  - "{{ lf_dev_libs_packages_common }}"
+  - "{{ lf_dev_libs_packages_distro }}"
 lf_dev_libs_packages_common:
   - automake
   - cmake

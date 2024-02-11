@@ -1,13 +1,16 @@
 ---
 - name: Pull in package names
-  include_vars: "{{ item }}"
+  ansible.builtin.include_vars: "{{ item }}"
   with_first_found:
     - '{{ ansible_distribution }}-{{ ansible_distribution_major_version }}.yaml'
     - '{{ ansible_distribution }}.yaml'
     - '{{ ansible_os_family }}.yaml'
 
 - name: Install Dev libraries
-  package:
-    name: '{{ lf_dev_libs_packages }}'
+  ansible.builtin.package:
+    update_cache: true
+    name:
+      - "{{ lf_dev_libs_packages_common }}"
+      - "{{ lf_dev_libs_packages_distro }}"
     state: present
   become: true

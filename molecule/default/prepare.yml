@@ -4,28 +4,26 @@
   gather_facts: true
   tasks:
     - name: Update APT cache
-      apt:
-        update_cache: yes
+      ansible.builtin.package:
+        update_cache: true
       when: ansible_distribution == 'Ubuntu'
       become: true
 
     - name: Install EPEL release repo
-      yum:
+      ansible.builtin.yum:
         name: https://dl.fedoraproject.org/pub/epel/epel-release-latest-{{ ansible_distribution_major_version }}.noarch.rpm
         state: present
-        disable_gpg_check: True
+        disable_gpg_check: true
       when: ansible_os_family == 'RedHat'
       become: true
 
     - name: Enable PowerTools
-      block:
-        - name: DNF Install config-manager
-          command:
-            cmd: "dnf install -y 'dnf-command(config-manager)'"
-            warn: no
-        - name: Enable PowerTools
-          command:
-            cmd: dnf config-manager --set-enabled powertools
-            warn: no
       become: true
       when: ansible_os_family == 'RedHat' and ansible_facts['distribution_major_version'] is version('8', '>=')
+      block:
+        - name: DNF Install config-manager
+          ansible.builtin.command:
+            cmd: "dnf install -y 'dnf-command(config-manager)'"
+        - name: Enable PowerTools
+          ansible.builtin.command:
+            cmd: dnf config-manager --set-enabled powertools
