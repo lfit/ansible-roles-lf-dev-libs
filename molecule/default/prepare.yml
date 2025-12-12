@@ -17,13 +17,15 @@
       when: ansible_os_family == 'RedHat'
       become: true
 
-    - name: Enable PowerTools
+    - name: Enable PowerTools/CRB
       become: true
       when: ansible_os_family == 'RedHat' and ansible_facts['distribution_major_version'] is version('8', '>=')
       block:
         - name: DNF Install config-manager
           ansible.builtin.command:
             cmd: "dnf install -y 'dnf-command(config-manager)'"
-        - name: Enable PowerTools
+        - name: Enable PowerTools (EL8) or CRB (EL9+)
           ansible.builtin.command:
-            cmd: dnf config-manager --set-enabled powertools
+            cmd: >
+              dnf config-manager --set-enabled
+              {% if ansible_facts['distribution_major_version'] is version('9', '>=') %}crb{% else %}powertools{% endif %}

@@ -111,8 +111,9 @@ jobs:
     strategy:
       matrix:
         distro:
-          - ubuntu2004
+          - centos9
           - ubuntu2204
+          - ubuntu2404
       fail-fast: false
     steps:
       - name: Gerrit Checkout
@@ -123,17 +124,27 @@ jobs:
           gerrit-project: ${{ inputs.GERRIT_PROJECT }}
           gerrit-url: ${{ vars.GERRIT_URL }}
           delay: "0s"
-      - name: Install test dependencies.
+      - name: Install Podman
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y podman
+      - name: Install test dependencies
         run: |
           python -m pip install --upgrade pip
-          pip3 install ansible ansible-lint molecule-plugins[docker] docker
-      - name: Run Molecule tests.
-        run: molecule test
+          pip3 install -r requirements.txt
+      - name: Run Molecule tests
+        run: |
+          DISTRO_VERSION=$(echo "${{ matrix.distro }}" | sed 's/ubuntu//')
+          UBUNTU_VERSION=$(echo "$DISTRO_VERSION" | sed 's/\([0-9]\{2\}\)/\1./')
+          sed -i "/platforms:/,/image:/ s/ubuntu2[24]04/${{ matrix.distro }}/" molecule/default/molecule.yml
+          sed -i "/platforms:/,/image:/ s/ubuntu:2[24]\.04/ubuntu:${UBUNTU_VERSION}/" molecule/default/molecule.yml
+          cat molecule/default/molecule.yml
+          molecule test
         working-directory: ${{env.working-directory}}
         env:
           PY_COLORS: "1"
           ANSIBLE_FORCE_COLOR: "1"
-          MOLECULE_PLATFORM_NAME: ${{ matrix.distro }}
+          MOLECULE_PROJECT_DIRECTORY: ${{ github.workspace }}
 
   vote:
     if: ${{ always() }}
