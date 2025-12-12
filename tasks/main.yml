@@ -9,9 +9,6 @@
 - name: Install Dev libraries
   ansible.builtin.package:
     update_cache: true
-    name: "{{ item }}"
+    name: "{{ lf_dev_libs_packages_common + lf_dev_libs_packages_distro }}"
     state: present
   become: true
-  with_items:
-    - "{{ lf_dev_libs_packages_common }}"
-    - "{{ lf_dev_libs_packages_distro }}"
