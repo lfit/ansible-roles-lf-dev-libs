@@ -6,38 +6,41 @@
     - name: Update APT cache
       ansible.builtin.package:
         update_cache: true
-      when: ansible_distribution == 'Ubuntu'
+      when: ansible_facts['distribution'] == 'Ubuntu'
       become: true
 
     - name: Install EPEL for CentOS/RHEL 9+
       ansible.builtin.dnf:
         name: epel-release
         state: present
-      when: ansible_os_family == 'RedHat' and ansible_distribution_major_version is version('9', '>=')
+      when: ansible_facts['os_family'] == 'RedHat' and ansible_facts['distribution_major_version'] is version('9', '>=')
       become: true
 
     - name: Install EPEL for CentOS/RHEL 8
       ansible.builtin.yum:
-        name: https://dl.fedoraproject.org/pub/epel/epel-release-latest-{{ ansible_distribution_major_version }}.noarch.rpm
+        name: https://dl.fedoraproject.org/pub/epel/epel-release-latest-{{ ansible_facts['distribution_major_version'] }}.noarch.rpm
         state: present
         disable_gpg_check: true
-      when: ansible_os_family == 'RedHat' and ansible_distribution_major_version == '8'
+      when: ansible_facts['os_family'] == 'RedHat' and ansible_facts['distribution_major_version'] == '8'
       become: true
 
     - name: DNF Install config-manager
       ansible.builtin.command:
         cmd: "dnf install -y 'dnf-command(config-manager)'"
-      when: ansible_os_family == 'RedHat' and ansible_facts['distribution_major_version'] is version('8', '>=')
+      when: ansible_facts['os_family'] == 'RedHat' and ansible_facts['distribution_major_version'] is version('8', '>=')
       become: true
+      changed_when: true
 
     - name: Enable PowerTools (EL8)
       ansible.builtin.command:
         cmd: "dnf config-manager --set-enabled powertools"
-      when: ansible_os_family == 'RedHat' and ansible_facts['distribution_major_version'] == '8'
+      when: ansible_facts['os_family'] == 'RedHat' and ansible_facts['distribution_major_version'] == '8'
       become: true
+      changed_when: true
 
     - name: Enable CRB (EL9+)
       ansible.builtin.command:
         cmd: "dnf config-manager --set-enabled crb"
-      when: ansible_os_family == 'RedHat' and ansible_facts['distribution_major_version'] is version('9', '>=')
+      when: ansible_facts['os_family'] == 'RedHat' and ansible_facts['distribution_major_version'] is version('9', '>=')
       become: true
+      changed_when: true
